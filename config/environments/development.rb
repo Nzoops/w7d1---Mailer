@@ -47,6 +47,9 @@ Rails.application.configure do
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
 
+  config.action_mailer.delivery_method = :letter_opener #config info related to mail sending
+  config.action_mailer.perform_deliveries = true #command shutting off the email sending coming from rails
+
   # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
 
@@ -73,4 +76,6 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+
 end

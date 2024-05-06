@@ -13,6 +13,9 @@ ENV RAILS_ENV="production" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development"
 
+    RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y build-essential git libvips pkg-config && \
+    apt-get install -y libpq-dev # Installation de libpq-dev
 
 # Throw-away build stage to reduce size of final image
 FROM base as build

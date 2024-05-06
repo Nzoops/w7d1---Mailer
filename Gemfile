@@ -69,3 +69,8 @@ end
 gem "table_print"
 
 gem "faker"
+gem "dockerfile-rails", ">= 1.6", :group => :development
+gem "letter_opener"
+gem 'dotenv-rails'
+
+gem "dotenv", "~> 3.1"
