@@ -2,6 +2,7 @@ require "faker"
 
 User.destroy_all
 Event.destroy_all
+Participation.destroy_all
 
 # Create Users
 10.times do
@@ -18,7 +19,7 @@ puts "User seeded"
 # Create Events
 10.times do
   event = Event.create(
-    title: Faker::Lorem.word * 2,
+    title: Faker::Lorem.word,
     description: Faker::Lorem.paragraph(sentence_count:2),
     price: rand(1..1000),
     location: Faker::Address.city,
